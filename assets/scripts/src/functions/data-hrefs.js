@@ -1,10 +1,10 @@
-export function addEvent(ele, event, func)
+function addEvent(ele, event, func)
 {
 	if(ele.addEventListener) ele.addEventListener(event, func, false);
 	else ele.attachEvent('on' + event, func);
 }
 
-export function link(event)
+function link(event)
 {
 	var target	= event.target;
 	var url	= this.getAttribute('data-href');
@@ -17,7 +17,7 @@ export function link(event)
 	}
 }
 
-export function setHrefs()
+function setHrefs()
 {
 	if (document.querySelectorAll)
 	{

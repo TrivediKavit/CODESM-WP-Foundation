@@ -1,18 +1,18 @@
-import intlTelInput from 'intl-tel-input';
-
-export function initTelephoneInput(selector, directory)
+function initTelephoneInput(selector, directory)
 {
 	var elements		= document.querySelectorAll(selector),
 		element_count	= elements.length;
 
 	if(element_count >= 1)
 	{
+		window.iti = [];
+
 		while (element_count-- > 0)
 		{
 			var element = elements[element_count];
 
-			var element_i = intlTelInput(element, {
-				utilsScript: directory + "/assets/scripts/utils.js",
+			window.iti[element_count] = intlTelInput(element, {
+				utilsScript: directory + "/assets/scripts/intl-tel-input-utility.js",
 				preferredCountries: ['US', 'MX'],
 				nationalMode: false,
 				initialCountry: "auto",
@@ -24,12 +24,14 @@ export function initTelephoneInput(selector, directory)
 					});
 				}
 			});
-
-			jQuery(element).on("keyup change", function(){
-				var currentText = element_i.getNumber(intlTelInputUtils.numberFormat.E164);
-				element_i.setNumber(currentText);
-			});
 		}
+
+		jQuery(selector).each(function(index){
+			jQuery(this).on("keyup change", function(){
+				var currentText = window.iti[index].getNumber(intlTelInputUtils.numberFormat.E164);
+				window.iti[index].setNumber(currentText);
+			});
+		});
 	}
 }
 

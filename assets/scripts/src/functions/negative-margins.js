@@ -1,4 +1,4 @@
-export function enableNegativeMargins()
+function enableNegativeMargins()
 {
 	var widthMobile = (jQuery(window).width() + (window.innerWidth - document.documentElement.clientWidth)) > 1024;
 

@@ -128,3 +128,13 @@ function get_excerpt_by_id($post, $length = 35, $tags = '<a><em><strong>', $extr
 
 	return apply_filters('the_content', $the_excerpt);
 }
+
+// ENQUEUE MODERN JQUERY
+function codesm_enqueue_modern_jquery()
+{
+    global $wp_scripts;
+    if(is_admin()) return;
+    $wp_scripts->registered['jquery-core']->src = 'https://code.jquery.com/jquery-3.5.1.min.js';
+    $wp_scripts->registered['jquery']->deps = ['jquery-core'];
+}
+add_action('wp_enqueue_scripts', 'codesm_enqueue_modern_jquery');
