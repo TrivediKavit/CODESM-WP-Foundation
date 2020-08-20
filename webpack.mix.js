@@ -47,7 +47,7 @@ mix.js([
     'assets/scripts/src/vendor/vendor.js', // VENDOR
     'node_modules/foundation-datepicker/js/foundation-datepicker.min.js', // FOUNDATION DATEPICKER
     'node_modules/owl.carousel/dist/owl.carousel.js', // OWL CAROUSEL JS
-    'node_modules/intl-tel-input/build/js/intlTelInput.js', // INTL-TEL-INPUT
+    //'node_modules/intl-tel-input/build/js/intlTelInput.js', // INTL-TEL-INPUT
     /** VENDOR SCRIPTS - END **/
 ],'assets/scripts/src/vendor/vendor-dist.js');
 

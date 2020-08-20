@@ -11,7 +11,7 @@ function initTelephoneInput(selector, directory)
 		{
 			var element = elements[element_count];
 
-			window.iti[element_count] = intlTelInput(element, {
+			window.iti[element_count] = window.intlTelInput(element, {
 				utilsScript: directory + "/assets/scripts/intl-tel-input-utility.js",
 				preferredCountries: ['US', 'MX'],
 				nationalMode: false,
@@ -34,4 +34,3 @@ function initTelephoneInput(selector, directory)
 		});
 	}
 }
-
