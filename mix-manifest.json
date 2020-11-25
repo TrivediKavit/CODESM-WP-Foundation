@@ -1,11 +1,7 @@
 {
-    "/assets/scripts/src/vendor/vendor-dist.js": "/assets/scripts/src/vendor/vendor-dist.js",
+    "/assets/scripts/script.js": "/assets/scripts/script.js",
     "/assets/styles/style.css": "/assets/styles/style.css",
-    "/assets/styles/login.css": "/assets/styles/login.css",
-    "/assets/scripts/src/vendor/vendor-dist.js.map": "/assets/scripts/src/vendor/vendor-dist.js.map",
+    "/assets/scripts/script.js.map": "/assets/scripts/script.js.map",
     "/assets/styles/style.css.map": "/assets/styles/style.css.map",
-    "/assets/styles/login.css.map": "/assets/styles/login.css.map",
-    "/assets/scripts/intl-tel-input-utility.js": "/assets/scripts/intl-tel-input-utility.js",
-    "/assets/scripts/src/functions.js": "/assets/scripts/src/functions.js",
-    "/assets/scripts/scripts.js": "/assets/scripts/scripts.js"
+    "/assets/scripts/intl-tel-input-utility.js": "/assets/scripts/intl-tel-input-utility.js"
 }

@@ -14,21 +14,22 @@
         "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
     },
     "keywords": [],
-    "author": "",
+    "author": "Kavit Trivedi",
     "license": "ISC",
-    "dependencies": {
-        "@fortawesome/fontawesome-free": "^5.14.0",
-        "foundation-sites": "^6.6.3",
-        "jquery": "^3.5.1",
-        "laravel-mix": "^5.0.4",
-        "what-input": "^5.2.10",
-        "foundation-datepicker": "^1.5.6",
-        "intl-tel-input": "^17.0.3",
-        "owl.carousel": "^2.3.4"
-    },
     "devDependencies": {
-        "sass": "^1.22.1",
-        "sass-loader": "^7.1.0",
-        "vue-template-compiler": "^2.6.10"
+        "laravel-mix": "^5.0.9",
+        "sass": "^1.29.0",
+        "sass-loader": "^8.0.2",
+        "vue-template-compiler": "^2.6.12"
+    },
+    "dependencies": {
+        "@fortawesome/fontawesome-free": "^5.15.1",
+        "foundation-datepicker": "^1.5.6",
+        "foundation-sites": "^6.6.3",
+        "intl-tel-input": "^17.0.8",
+        "jquery": "^3.5.1",
+        "swiper": "^6.3.5",
+        "owl.carousel": "^2.3.4",
+        "what-input": "^5.2.10"
     }
 }

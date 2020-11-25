@@ -32,8 +32,8 @@
 				</div>
 			</div>
 			<div class="show-for-small-only">
-				<ul class="menu" id="mobileMenuToggleContainer">
-					<li><a data-toggle="off-canvas" class="uc" id="mobileMenuToggle"><i class="fas fa-bars"></i></a></li>
+				<ul class="menu" id="mobile-menu-toggle-container">
+					<li><a data-toggle="off-canvas" class="uc" id="mobile-menu-toggle"><i class="fas fa-bars"></i></a></li>
 				</ul>
 			</div>
 		</div>

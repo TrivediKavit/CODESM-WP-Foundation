@@ -1,4 +1,4 @@
-function initEqualizeContent(selector)
+export function initEqualizeContent(selector)
 {
 	if(jQuery(selector).length)
 	{

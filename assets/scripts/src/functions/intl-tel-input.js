@@ -1,4 +1,4 @@
-function initTelephoneInput(selector, directory)
+export function initTelephoneInput(selector, directory)
 {
 	var elements		= document.querySelectorAll(selector),
 		element_count	= elements.length;
@@ -13,7 +13,7 @@ function initTelephoneInput(selector, directory)
 
 			window.iti[element_count] = window.intlTelInput(element, {
 				utilsScript: directory + "/assets/scripts/intl-tel-input-utility.js",
-				preferredCountries: ['US', 'MX'],
+				preferredCountries: ['RO'],
 				nationalMode: false,
 				initialCountry: "auto",
 				formatOnDisplay: true,

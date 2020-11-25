@@ -1,4 +1,4 @@
-function mapStyles()
+export function mapStyles()
 {
   return [
     {
