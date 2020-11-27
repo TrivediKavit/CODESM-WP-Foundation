@@ -7,7 +7,7 @@ function site_scripts() {
     
     // Adding scripts file in the footer
     // wp_enqueue_script( 'vendor-js', get_template_directory_uri() . '/assets/scripts/vendor.js', array( 'jquery' ), filemtime(get_template_directory() . '/assets/scripts/vendor.js'), true );
-    wp_enqueue_script( 'site-js', get_template_directory_uri() . '/assets/scripts/scripts.js', array( 'jquery' ), filemtime(get_template_directory() . '/assets/scripts/scripts.js'), true );
+    wp_enqueue_script( 'site-js', get_template_directory_uri() . '/assets/scripts/script.js', array( 'jquery' ), filemtime(get_template_directory() . '/assets/scripts/script.js'), true );
    
     // Register main stylesheet
     wp_enqueue_style( 'site-css', get_template_directory_uri() . '/assets/styles/style.css', array(), filemtime(get_template_directory() . '/assets/styles/scss'), 'all' );
