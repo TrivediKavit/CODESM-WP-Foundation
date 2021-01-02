@@ -4,7 +4,7 @@
 import 'what-input'
 import Foundation from 'foundation-sites'
 import intlTelInput from 'intl-tel-input'
-import Swiper from 'swiper';
+import Swiper, { Navigation, Pagination } from 'swiper'
 import { setHrefs } from './functions/data-hrefs'
 import { initEqualizeContent } from './functions/equalizer'
 import { initTelephoneInput } from './functions/intl-tel-input'
@@ -28,6 +28,7 @@ const DATEPICKER_FORMAT = "dd/mm/yyyy"
 const EQUALIZE_CONTENT = ".codesm-equalize-content"
 
 Foundation.addToJquery(jQuery)
+Swiper.use([Navigation, Pagination])
 window.intlTelInput = intlTelInput
 window.setHrefs = setHrefs
 window.initEqualizeContent = initEqualizeContent

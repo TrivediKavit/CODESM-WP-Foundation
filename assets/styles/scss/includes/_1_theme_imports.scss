@@ -77,6 +77,52 @@ IMPORT INTL-TEL-INPUT - END
 *********************/
 
 /*********************
+IMPORT SWIPER - START
+*********************/
+@import './node_modules/swiper/swiper.scss';
+
+.swiper-pagination
+{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: rem-calc(24);
+	position: relative;
+	text-align: center;
+    bottom: 0!important;
+    width: 100%!important;
+    clear: both;
+
+    .swiper-pagination-bullet
+    {
+        width: rem-calc(12);
+		height: rem-calc(12);
+		cursor: pointer;
+        display: inline-block;
+        border-radius: 100%;
+        background: $brand-secondary;
+        opacity: 1;
+
+        &:focus
+        {
+            outline: none;
+        }
+
+        &:not(:last-child)
+        {
+            margin-right: rem-calc(10);
+        }
+    }
+
+    .swiper-pagination-bullet-active
+    {
+        background: $brand-primary;
+    }
+}
+/*********************
+IMPORT SWIPER - END
+*********************/
+
+/*********************
 IMPORT OWL CAROUSEL - START
 *********************/
 @import './node_modules/owl.carousel/src/scss/owl.carousel.scss';
