@@ -28,8 +28,8 @@
         "foundation-sites": "^6.6.3",
         "intl-tel-input": "^17.0.8",
         "jquery": "^3.5.1",
-        "swiper": "^6.3.5",
         "owl.carousel": "^2.3.4",
+        "swiper": "^6.3.5",
         "what-input": "^5.2.10"
     }
 }

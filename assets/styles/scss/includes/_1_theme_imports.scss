@@ -2,10 +2,10 @@
 IMPORT FONTAWESOME - START
 *********************/
 $fa-font-path: "../fonts/font-awesome";
-@import "./node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss";
-@import "./node_modules/@fortawesome/fontawesome-free/scss/regular.scss";
-@import "./node_modules/@fortawesome/fontawesome-free/scss/brands.scss";
-@import "./node_modules/@fortawesome/fontawesome-free/scss/solid.scss";
+@import "~@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "~@fortawesome/fontawesome-free/scss/regular.scss";
+@import "~@fortawesome/fontawesome-free/scss/brands.scss";
+@import "~@fortawesome/fontawesome-free/scss/solid.scss";
 /*********************
 IMPORT FONTAWESOME - END
 *********************/
@@ -13,7 +13,7 @@ IMPORT FONTAWESOME - END
 /*********************
 IMPORT FOUNDATION DATEPICKER - START
 *********************/
-@import "./node_modules/foundation-datepicker/scss/foundation-datepicker.scss";
+@import "~foundation-datepicker/scss/foundation-datepicker.scss";
 
 .datepicker
 {
@@ -79,7 +79,7 @@ IMPORT INTL-TEL-INPUT - END
 /*********************
 IMPORT SWIPER - START
 *********************/
-@import './node_modules/swiper/swiper.scss';
+@import '~swiper/swiper.scss';
 
 .swiper-pagination
 {
@@ -125,8 +125,8 @@ IMPORT SWIPER - END
 /*********************
 IMPORT OWL CAROUSEL - START
 *********************/
-@import './node_modules/owl.carousel/src/scss/owl.carousel.scss';
-@import './node_modules/owl.carousel/src/scss/owl.theme.default.scss';
+@import '~owl.carousel/src/scss/owl.carousel.scss';
+@import '~owl.carousel/src/scss/owl.theme.default.scss';
 
 .owl-carousel
 {

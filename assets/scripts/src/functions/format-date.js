@@ -24,9 +24,9 @@ export function formatDate(format, date)
 	const map = {
         mm: month,
         dd: day,
+        yyyy: year,
         yy: year.toString().slice(-2),
-        yyyy: year
     }
 
-    return format.replace(/mm|dd|yy|yyy/gi, matched => map[matched])
+    return format.replace(/mm|dd|yyyy|yy/gi, matched => map[matched])
 }

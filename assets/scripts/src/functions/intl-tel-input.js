@@ -13,7 +13,7 @@ export function initTelephoneInput(selector, directory)
 
 			window.iti[element_count] = window.intlTelInput(element, {
 				utilsScript: directory + "/assets/scripts/intl-tel-input-utility.js",
-				preferredCountries: ['RO'],
+				preferredCountries: ['US', 'MX'],
 				nationalMode: false,
 				initialCountry: "auto",
 				formatOnDisplay: true,

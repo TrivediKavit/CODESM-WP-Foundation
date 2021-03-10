@@ -56,3 +56,55 @@ function custom_owl_carousel_gallery_showcase( $atts ) {
 }
 
 add_shortcode( 'owl_carousel_gallery', 'custom_owl_carousel_gallery_showcase' );
+
+// Swiper Gallery Showcase Shortcode
+function custom_swiper_gallery_showcase( $atts ) {
+
+	// Attributes
+	$atts = shortcode_atts(array(
+                'ids' => '',
+                'image_size' => 'full',
+                'placeholder' => false,
+                'placeholder_count' => 6,
+                'placeholder_image' => 'https://placehold.jp/72/878e94/ffffff/1920x1080.jpg?text=Gallery%20Image%20%23',
+			), $atts, 'swiper_gallery' );
+
+    if($atts['ids'] != '' && $atts['placeholder'] == false)
+    {
+        $full_images = array();
+
+        $image_ids = explode(',',$atts['ids']);
+
+        foreach($image_ids as $image_id)
+        {
+            // FULL IMAGE
+            $url = wp_get_attachment_image_src( $image_id, $atts['image_size']);
+            $full_images[] = $url[0];
+        }
+    }
+
+    $return = '';
+
+    $return .= "<div id=\"swiper-gallery\" class=\"swiper-container\" data-slider-id=\"" . get_the_ID() . "\">";
+        $return .= "<div class=\"swiper-wrapper\">";
+        if($atts['placeholder'] == false):
+            foreach ($full_images as $full_image):
+                $return .= "<div class=\"swiper-slide\"><img src=\"" . $full_image . "\" /></div>";
+            endforeach;
+        else:
+            foreach (range(0, $atts['placeholder_count']) as $i):
+                $name = $atts['placeholder_image'].($i+1);
+                $return .= "<div class=\"swiper-slide\"><img src=\"" . $name . "\" /></div>";
+            endforeach;
+        endif;
+        $return .= "</div>";
+        $return .= "<div class=\"swiper-navigation\">";
+            $return .="<span class=\"swiper-button-prev\"><img src=\"" . get_template_directory_uri() . "/assets/images/icon-long-arrow-left-white.svg\" /></span>";
+            $return .="<span class=\"swiper-button-next\"><img src=\"" . get_template_directory_uri() . "/assets/images/icon-long-arrow-right-white.svg\" /></span>";
+        $return .= "</div>";
+    $return .= "</div>";
+
+    return $return;
+}
+
+add_shortcode( 'swiper_gallery', 'custom_swiper_gallery_showcase' );
