@@ -24,7 +24,7 @@ import { mapStyles } from './functions/map-styles'
 const THEME_FOLDER = "../wp-content/themes/codesm_wp_foundation"
 const PHONE_FIELD = ".codesm-phone-field"
 const DATEPICKER_FIELD = ".codesm-datepicker-field"
-const DATEPICKER_FORMAT = "dd/mm/yyyy"
+const DATEPICKER_FORMAT = "mm/dd/yyyy"
 const EQUALIZE_CONTENT = ".codesm-equalize-content"
 
 Foundation.addToJquery(jQuery)

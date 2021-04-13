@@ -134,7 +134,7 @@ function codesm_enqueue_modern_jquery()
 {
     global $wp_scripts;
     if(is_admin()) return;
-    $wp_scripts->registered['jquery-core']->src = 'https://code.jquery.com/jquery-3.5.1.min.js';
+    $wp_scripts->registered['jquery-core']->src = 'https://code.jquery.com/jquery-3.6.0.min.js';
     $wp_scripts->registered['jquery']->deps = ['jquery-core'];
 }
 add_action('wp_enqueue_scripts', 'codesm_enqueue_modern_jquery');
