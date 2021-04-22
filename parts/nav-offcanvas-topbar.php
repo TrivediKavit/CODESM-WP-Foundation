@@ -34,6 +34,10 @@
 			<div class="show-for-small-only">
 				<ul class="menu" id="mobile-menu-toggle-container">
 					<li><a data-toggle="off-canvas" class="uc" id="mobile-menu-toggle"><i class="fas fa-bars"></i></a></li>
+					<li id="mobile-additional-links" class="float-right">
+						<a href="#" title="Call Us"><i class="fas fa-phone-volume"></i></a>
+						<a href="#" title="Find Us"><i class="fas fa-map-marker-alt"></i></a>
+					</li>
 				</ul>
 			</div>
 		</div>

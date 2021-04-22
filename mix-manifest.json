@@ -1,7 +1,22 @@
 {
     "/assets/scripts/script.js": "/assets/scripts/script.js",
     "/assets/styles/style.css": "/assets/styles/style.css",
-    "/assets/scripts/script.js.map": "/assets/scripts/script.js.map",
-    "/assets/styles/style.css.map": "/assets/styles/style.css.map",
-    "/assets/scripts/intl-tel-input-utility.js": "/assets/scripts/intl-tel-input-utility.js"
+    "/assets/fonts/font-awesome/fa-brands-400.eot": "/assets/fonts/font-awesome/fa-brands-400.eot",
+    "/assets/fonts/font-awesome/fa-brands-400.svg": "/assets/fonts/font-awesome/fa-brands-400.svg",
+    "/assets/fonts/font-awesome/fa-brands-400.ttf": "/assets/fonts/font-awesome/fa-brands-400.ttf",
+    "/assets/fonts/font-awesome/fa-brands-400.woff": "/assets/fonts/font-awesome/fa-brands-400.woff",
+    "/assets/fonts/font-awesome/fa-brands-400.woff2": "/assets/fonts/font-awesome/fa-brands-400.woff2",
+    "/assets/fonts/font-awesome/fa-regular-400.eot": "/assets/fonts/font-awesome/fa-regular-400.eot",
+    "/assets/fonts/font-awesome/fa-regular-400.svg": "/assets/fonts/font-awesome/fa-regular-400.svg",
+    "/assets/fonts/font-awesome/fa-regular-400.ttf": "/assets/fonts/font-awesome/fa-regular-400.ttf",
+    "/assets/fonts/font-awesome/fa-regular-400.woff": "/assets/fonts/font-awesome/fa-regular-400.woff",
+    "/assets/fonts/font-awesome/fa-regular-400.woff2": "/assets/fonts/font-awesome/fa-regular-400.woff2",
+    "/assets/fonts/font-awesome/fa-solid-900.eot": "/assets/fonts/font-awesome/fa-solid-900.eot",
+    "/assets/fonts/font-awesome/fa-solid-900.svg": "/assets/fonts/font-awesome/fa-solid-900.svg",
+    "/assets/fonts/font-awesome/fa-solid-900.ttf": "/assets/fonts/font-awesome/fa-solid-900.ttf",
+    "/assets/fonts/font-awesome/fa-solid-900.woff": "/assets/fonts/font-awesome/fa-solid-900.woff",
+    "/assets/fonts/font-awesome/fa-solid-900.woff2": "/assets/fonts/font-awesome/fa-solid-900.woff2",
+    "/assets/scripts/intl-tel-input-utility.js": "/assets/scripts/intl-tel-input-utility.js",
+    "/assets/images/intl-tel-input/flags.png": "/assets/images/intl-tel-input/flags.png",
+    "/assets/images/intl-tel-input/flags@2x.png": "/assets/images/intl-tel-input/flags@2x.png"
 }

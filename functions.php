@@ -46,9 +46,6 @@ require_once(get_template_directory().'/functions/translation/translation.php');
 // Customize the WordPress admin
 // require_once(get_template_directory().'/functions/admin.php');
 
-// Custom Post Type - Testimonials
-// require_once(get_template_directory().'/functions/custom-post-type-testimonials.php');
-
 // Custom Shortcodes
 require_once(get_template_directory().'/functions/custom-shortcodes.php');
 
@@ -129,12 +126,12 @@ function get_excerpt_by_id($post, $length = 35, $tags = '<a><em><strong>', $extr
 	return apply_filters('the_content', $the_excerpt);
 }
 
-// ENQUEUE MODERN JQUERY
-function codesm_enqueue_modern_jquery()
-{
-    global $wp_scripts;
-    if(is_admin()) return;
-    $wp_scripts->registered['jquery-core']->src = 'https://code.jquery.com/jquery-3.6.0.min.js';
-    $wp_scripts->registered['jquery']->deps = ['jquery-core'];
-}
-add_action('wp_enqueue_scripts', 'codesm_enqueue_modern_jquery');
+// ENQUEUE MODERN JQUERY (NO LONGER REQUIRED WITH MODERN WORDPRESS VERSIONS)
+// function codesm_enqueue_modern_jquery()
+// {
+//     global $wp_scripts;
+//     if(is_admin()) return;
+//     $wp_scripts->registered['jquery-core']->src = 'https://code.jquery.com/jquery-3.6.0.min.js';
+//     $wp_scripts->registered['jquery']->deps = ['jquery-core'];
+// }
+// add_action('wp_enqueue_scripts', 'codesm_enqueue_modern_jquery');

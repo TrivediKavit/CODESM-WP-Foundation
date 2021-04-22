@@ -50,7 +50,10 @@ header.header
 
 	ul.submenu
 	{
-		margin-left: rem-calc(18);
+		@include breakpoint(medium)
+		{
+			margin-left: rem-calc(18);
+		}
 	}
 
 	.button,
@@ -121,8 +124,50 @@ header.header
 	font-size: rem-calc(30);
 	line-height: 1;
 	position: absolute;
-	top: 0;
-	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+    left: 0;
+}
+
+#mobile-additional-links
+{
+	padding: 0 rem-calc(10);
+	font-size: rem-calc(30);
+	line-height: 1;
+
+	a
+	{
+		color: $brand-primary;
+		background-color: $brand-white;
+		text-align: center;
+		line-height: 1;
+		padding: 0 0 rem-calc(5);
+		min-height: rem-calc(36);
+		min-width: rem-calc(36);
+		border: rem-calc(2) solid $brand-primary;
+		border-radius: 0;
+		display: block;
+		transition: 0.3s all;
+
+		i
+		{
+			font-size: rem-calc(18);
+			line-height: 1;
+			padding: rem-calc(0);
+		}
+
+		&:hover,
+		&:focus
+		{
+			color: $brand-white;
+			background-color: $brand-primary;
+		}
+
+		&:not(:last-child)
+		{
+			margin-bottom: rem-calc(8);
+		}
+	}
 }
 
 body.logged-in
@@ -151,6 +196,8 @@ body.logged-in
 
 		a
 		{
+			z-index: 1;
+			position: relative;
 			padding: rem-calc(24) 0;
 		}
 	}

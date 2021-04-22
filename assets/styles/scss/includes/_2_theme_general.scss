@@ -9,6 +9,15 @@ body
 
 
 /** 
+ * [data-href]
+ */
+*[data-href]
+{
+	cursor: pointer;
+}
+
+
+/** 
  * Add font sizes
  */
 .extra-large
@@ -53,6 +62,22 @@ body
 .float-right-for-large
 {
 	@include breakpoint(large)
+	{
+		float: right!important;
+	}
+}
+
+.float-left-for-xlarge
+{
+	@include breakpoint(xlarge)
+	{
+		float: left!important;
+	}
+}
+
+.float-right-for-xlarge
+{
+	@include breakpoint(xlarge)
 	{
 		float: right!important;
 	}

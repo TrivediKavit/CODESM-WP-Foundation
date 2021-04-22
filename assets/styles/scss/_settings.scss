@@ -60,13 +60,13 @@
 //  55. Top Bar
 //  56. Xy Grid
 
-@import '../../../node_modules/foundation-sites/scss/util/util';
+@import '~foundation-sites/scss/util/util';
 
 // 1. Global
 // ---------
 
 $global-font-size: 100%;
-$global-width: rem-calc(1200);
+$global-width: rem-calc(1660);
 $global-lineheight: 1.5;
 $foundation-palette: (
   primary: #fbb900,
@@ -111,9 +111,10 @@ $breakpoints: (
   large: 1024px,
   xlarge: 1200px,
   xxlarge: 1440px,
+  xsitewidth: 1660px,
 );
 $print-breakpoint: large;
-$breakpoint-classes: (small medium large xlarge);
+$breakpoint-classes: (small medium large xlarge xxlarge xsitewidth);
 
 // 3. The Grid
 // -----------
@@ -873,4 +874,5 @@ $xy-block-grid-max: 8;
 
 // AA. Contrast Warnings
 // ---------------------
+
 $contrast-warnings: false;
