@@ -13,7 +13,7 @@ get_header(); ?>
 	
 		<div class="inner-content row">
 	
-		    <main class="main columns large-12" role="main">
+		    <main class="main columns small-12" role="main">
 		    
 			    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 			 

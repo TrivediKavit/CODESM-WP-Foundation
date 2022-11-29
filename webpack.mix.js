@@ -47,3 +47,10 @@ mix.js('assets/scripts/src/script.js','assets/scripts/script.js');
 mix.sass('assets/styles/scss/style.scss', 'assets/styles/style.css');
 
 mix.sourceMaps(true, 'source-map');
+
+// Use this to debug `--stats-children` warnings
+// mix.webpackConfig({
+//     stats: {
+//         children: true,
+//     },
+// });

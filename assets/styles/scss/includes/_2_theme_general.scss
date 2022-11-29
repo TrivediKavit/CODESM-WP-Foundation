@@ -7,6 +7,11 @@ body
 	-moz-osx-font-smoothing: grayscale;
 }
 
+.row
+{
+	width: 100%;
+}
+
 
 /** 
  * [data-href]
@@ -89,7 +94,7 @@ body
  */
 .no-margin-bottom
 {
-	margin-bottom: 0;
+	margin-bottom: 0 !important;
 }
 
 .bottom-buffer-0point5rem

@@ -11,7 +11,7 @@ get_header(); ?>
 
 		<div class="inner-content row">
 	
-			<main class="main columns large-12" role="main">
+			<main class="main columns small-12" role="main">
 				<header>
 					<h1 class="archive-title"><?php _e( 'Search Results for:', 'jointswp' ); ?> <?php echo esc_attr(get_search_query()); ?></h1>
 				</header>

@@ -1,4 +1,67 @@
 /**
+* Style for when viewport goes below {xxlarge} breakpoint
+*/
+@media all and #{breakpoint(xlarge down)}
+{
+	.top-bar-left
+	{
+		text-align: center;
+
+		&.float-left
+		{
+			float: none!important;
+		}
+
+		.menu
+		{
+			display: block;
+
+			.menu-text
+			{
+				justify-content: center;
+
+				a
+				{
+					display: inline-block;
+				}
+			}
+		}
+	}
+
+	.top-bar-right
+	{
+		width: 100%;
+
+		.float-right
+		{
+			float: none!important;
+			display: block;
+			text-align: center;
+		}
+
+		.show-inline
+		{
+			display: block;
+			+ .show-inline
+			{
+				margin-left: 0;
+			}
+		}
+
+		.primary-menu
+		{
+			margin-top: rem-calc(16);
+			margin-bottom: rem-calc(16);
+		}
+
+		.additional-links
+		{
+			margin-bottom: rem-calc(8);
+		}
+	}
+}
+
+/**
 * Style for when viewport goes above {xlarge} breakpoint
 */
 @media all and #{breakpoint(xlarge)}
@@ -32,58 +95,15 @@
 	{
 		padding-right: rem-calc(45);
 	}
-}
 
-/**
-* Style for when viewport goes below {large} breakpoint
-*/
-@media all and #{breakpoint(large down)}
-{
-	.top-bar-left
+	.extra-large-padding-left-for-xlarge
 	{
-		text-align: center;
-
-		&.float-left
-		{
-			float: none!important;
-		}
-
-		.menu-text
-		{
-			display: block;
-
-			a
-			{
-				display: inline-block;
-			}
-		}
+		padding-left: rem-calc(60);
 	}
 
-	.top-bar-right
+	.extra-large-padding-right-for-xlarge
 	{
-		width: 100%;
-
-		.float-right
-		{
-			float: none!important;
-			display: block;
-			text-align: center;
-		}
-
-		.show-inline
-		{
-			display: block;
-			+ .show-inline
-			{
-				margin-left: 0;
-			}
-		}
-
-		.primary-menu
-		{
-			margin-top: rem-calc(0);
-			margin-bottom: rem-calc(18);
-		}
+		padding-right: rem-calc(60);
 	}
 }
 
@@ -120,6 +140,16 @@
 	.extra-big-padding-right-for-large
 	{
 		padding-right: rem-calc(45);
+	}
+
+	.extra-large-padding-left-for-large
+	{
+		padding-left: rem-calc(60);
+	}
+
+	.extra-large-padding-right-for-large
+	{
+		padding-right: rem-calc(60);
 	}
 }
 

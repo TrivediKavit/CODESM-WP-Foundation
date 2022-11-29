@@ -6,6 +6,61 @@
 	min-height: rem-calc(300);
 }
 
+.content-width
+{
+	.column-left
+	{
+		.column-left-content
+		{
+			padding-left: rem-calc(15);
+			padding-right: rem-calc(15);
+
+			@include breakpoint(xlarge)
+			{
+				width: 100%;
+				max-width: rem-calc(830);
+				padding-left: rem-calc(15);
+				padding-right: rem-calc(60);
+			}
+		}
+	}
+
+	.column-right
+	{
+		.column-right-content
+		{
+			padding-left: rem-calc(15);
+			padding-right: rem-calc(15);
+
+			@include breakpoint(xlarge)
+			{
+				width: 100%;
+				max-width: rem-calc(830);
+				padding-right: rem-calc(15);
+				padding-left: rem-calc(60);
+			}
+		}
+	}
+
+	.content-image
+	{
+		width: 100%;
+	}
+}
+
+.clear
+{
+	&-left
+	{
+		clear: left;
+	}
+
+	&-right
+	{
+		clear: right;
+	}
+}
+
 
 /** 
  * Remove margin-bottom from flex-video
@@ -90,6 +145,7 @@ button.button
 	
 }
 
+
 /** 
  * Add list classes
  */
@@ -101,44 +157,148 @@ ul.social-icons
 
 	li
 	{
-        float: none;
-        display: inline-block;
+		float: none;
+		display: inline-block;
 
 		a
 		{
-			color: $brand-white;
-			background-color: transparent;
-			text-align: center;
+			border: none;
 			line-height: 1;
-			padding: rem-calc(10) rem-calc(5) rem-calc(0);
-			min-height: rem-calc(40);
-			min-width: rem-calc(40);
-			border: rem-calc(2) solid $brand-white;
-			border-radius: 50%;
-			display: inline-block;
+			text-align: center;
 			transition: 0.3s all;
+			display: inline-block;
+			color: $brand-white;
+			min-width: rem-calc(50);
+			min-height: rem-calc(50);
+			background-color: $brand-primary;
+			padding: rem-calc(14) rem-calc(5) rem-calc(0);
+			box-shadow: 0 rem-calc(2) rem-calc(6) rgba(53, 53, 53, 0.09);
 
 			i
 			{
-				font-size: rem-calc(18);
 				line-height: 1;
 				padding: rem-calc(0);
+				font-size: rem-calc(24);
 			}
 
 			&:hover,
 			&:focus
 			{
 				color: $brand-primary;
-				background-color: $brand-white;
+				background-color: $brand-secondary;
 			}
 		}
 
 		&:not(:last-child)
 		{
-			margin-right: rem-calc(12);
+			margin-right: rem-calc(8);
 		}
 	}
 }
+
+
+/**
+ * Add Accordion Styles
+ */
+.accordion
+{
+	border: none;
+	text-align: center;
+	background: transparent;
+
+	.accordion-title
+	{
+		text-align: left;
+		padding: rem-calc(24);
+		text-transform: capitalize;
+		color: $brand-header-color;
+		border-radius: rem-calc(0);
+		padding-right: rem-calc(45);
+		background-color: $brand-white;
+		border: rem-calc(1) solid rgba($brand-primary, 0.15);
+
+		@include breakpoint(large)
+		{
+			padding-left: rem-calc(30);
+		}
+
+		&::before
+		{
+			display: block;
+			content: "\f078";
+			font-weight: 900;
+			right: rem-calc(30);
+			font-size: rem-calc(20);
+			color: $brand-secondary;
+			font-family: "Font Awesome 5 Free";
+		}
+
+		&:after
+		{
+			content: "";
+			display: none;
+		}
+
+		&:hover,
+		&:focus
+		{
+			background-color: $brand-white;
+		}
+	}
+
+	.accordion-item
+	{
+		border-radius: rem-calc(0);
+
+		&.is-active
+		{
+			.accordion-title
+			{
+				outline: none;
+				border-radius: 0;
+				position: relative;
+				color: $brand-white;
+				background: $brand-primary;
+				border-top-left-radius: rem-calc(0);
+				border-top-right-radius: rem-calc(0);
+
+				h4
+				{
+					color: $brand-white!important;
+				}
+
+				&::before 
+				{
+					content: "\f077";
+					color: $brand-white;
+				}
+			}
+		}
+
+		&:not(:last-child)
+		{
+			margin-bottom: rem-calc(16);
+		}
+	}
+}
+
+.accordion-content
+{
+	border: none;
+	background: transparent;
+	padding: rem-calc(24);
+	border-bottom-left-radius: rem-calc(0);
+	border-bottom-right-radius: rem-calc(0);
+	border-left: rem-calc(1) solid rgba($brand-primary, 0.15);
+	border-right: rem-calc(1) solid rgba($brand-primary, 0.15);
+	border-bottom: rem-calc(1) solid rgba($brand-primary, 0.15);
+
+	@include breakpoint(large)
+	{
+		padding: rem-calc(30) rem-calc(24);
+	}
+}
+
 
 /** 
  * Add pagination styles
@@ -153,31 +313,31 @@ ul.social-icons
 	span,
 	a
 	{
-		font-family: "Work Sans", sans-serif;
-		display: inline-block;
-		margin: 0 rem-calc(5);
-		padding: rem-calc(15) rem-calc(12) rem-calc(15);
-		font-size: rem-calc(18);
-		font-weight: 400;
-		line-height: rem-calc(21);
-		text-decoration: none;
-		text-align: center;
-		background-color: $brand-secondary;
-		background-repeat: no-repeat;
-		background-position: center center;
 		border: none;
-		border-radius: 50%;
-		color: $brand-white;
-		min-width: rem-calc(51);
-		min-height: rem-calc(51);
+		font-weight: 700;
+		text-align: center;
+		color: $brand-secondary;
+		border: 1px solid $brand-primary;
 		transition: all 0.3s;
+		text-decoration: none;
+		margin: 0 rem-calc(5);
+		display: inline-block;
+		font-size: rem-calc(30);
+		min-width: rem-calc(63);
+		min-height: rem-calc(63);
+		background-repeat: no-repeat;
+		font-family: "Kepler Std";
+		background-position: center center;
+		background-color: $brand-white;
+		padding: rem-calc(15) rem-calc(30) rem-calc(15);
+		box-shadow: 0 rem-calc(4) rem-calc(10) rgba(91, 67, 10, 0.1);
 	}
 
 	a:hover,
 	span.active
 	{
-		background-color: $brand-primary;
 		border-color: none;
-		color: $brand-white;
+		color: $brand-primary;
+		background-color: $brand-secondary;
 	}
 }

@@ -14,38 +14,41 @@
 
 
 /**
- * Adding styles for header and top-bar
- */
+* Adding styles for header and top-bar
+*/
 header.header
 {
+	z-index: 1;
+	position: relative;
 	background-color: $brand-white;
-	box-shadow: 0 0 rem-calc(5) rgba(192, 192, 192, 0.5);
-	padding: 0;
+	box-shadow: rem-calc(0) rem-calc(1) rem-calc(4) rgba($brand-body-color, 0.1);
 }
 
 .top-bar
 {
 	position: relative;
+	padding: rem-calc(24) 0;
 
-	ul
+	@include breakpoint(medium)
 	{
-		padding: 0;
+		padding: rem-calc(16) 0;
 	}
 }
 
+
 /**
- * Off Canvas Styles
- */
+* Off Canvas Styles
+*/
 #off-canvas
 {
-	padding: rem-calc(60) rem-calc(30) rem-calc(30) rem-calc(60);
+	padding: rem-calc(60) rem-calc(30) rem-calc(30) rem-calc(45);
 
 	/**
 	* Style for when viewport goes below {medium} breakpoint
 	*/
 	@include breakpoint(small down)
 	{
-		padding: rem-calc(60) rem-calc(30) rem-calc(30);
+		padding: rem-calc(45) rem-calc(30) rem-calc(30) rem-calc(36);
 	}
 
 	ul.submenu
@@ -72,13 +75,21 @@ header.header
 			a
 			{
 				color: $brand-white;
+				min-width: rem-calc(40);
+				min-height: rem-calc(40);
+				padding-top: rem-calc(10);
 				background-color: $brand-primary;
+
+				i
+				{
+					font-size: rem-calc(21);
+				}
 
 				&:hover,
 				&:focus
 				{
-					color: $brand-primary;
-					background-color: $brand-white;
+					color: $brand-white;
+					background-color: $brand-secondary;
 				}
 			}
 		}
@@ -87,7 +98,7 @@ header.header
 
 .off-canvas-content
 {
-	background-color: $white;
+	background-color: $brand-white;
 	/* 	
 	&.is-open-left
 	{
@@ -99,61 +110,62 @@ header.header
 
 #off-canvas-close
 {
-	background-color: white;
+	top: 0;
+	right: 0;
+	outline: none;
+	line-height: 1;
+	cursor: pointer;
+	position: absolute;
 	padding: 0 rem-calc(10);
 	font-size: rem-calc(60);
-	line-height: 1;
-	position: absolute;
-	right: 0;
-	top: 0;
-	cursor: pointer;
-	outline: none;
+	background-color: $brand-white;
 }
 
 #mobile-menu-toggle-container
 {
-	position: absolute;
-	width: 96%;
 	top: 50%;
+	width: 100%;
+	position: absolute;
 	transform: translateY(-51%);
 }
 
 #mobile-menu-toggle
 {
-	padding: 0 rem-calc(10);
-	font-size: rem-calc(30);
+	right: 0;
+	top: 50%;
 	line-height: 1;
 	position: absolute;
-	top: 50%;
+	color: $brand-white;
+	padding: 0 rem-calc(10);
+	font-size: rem-calc(30);
 	transform: translateY(-50%);
-    left: 0;
 }
 
 #mobile-additional-links
 {
+	line-height: 1;
 	padding: 0 rem-calc(10);
 	font-size: rem-calc(30);
-	line-height: 1;
 
 	a
 	{
-		color: $brand-primary;
-		background-color: $brand-white;
-		text-align: center;
-		line-height: 1;
-		padding: 0 0 rem-calc(5);
-		min-height: rem-calc(36);
-		min-width: rem-calc(36);
-		border: rem-calc(2) solid $brand-primary;
-		border-radius: 0;
 		display: block;
+		line-height: 1;
+		border-radius: 0;
+		text-align: center;
 		transition: 0.3s all;
+		color: $brand-primary;
+		min-width: rem-calc(36);
+		min-height: rem-calc(36);
+		padding: 0 0 rem-calc(5);
+		background-color: $brand-white;
+		border: rem-calc(2) solid $brand-primary;
 
 		i
 		{
-			font-size: rem-calc(18);
 			line-height: 1;
 			padding: rem-calc(0);
+			font-size: rem-calc(18);
 		}
 
 		&:hover,
@@ -185,9 +197,9 @@ body.logged-in
 
 
 /** 
- * Removing default styles from .menu and .menu-text (logo)
- * Adding padding to .menu-text (logo)
- */
+* Removing default styles from .menu and .menu-text (logo)
+* Adding padding to .menu-text (logo)
+*/
 .menu
 {
 	li.menu-text
@@ -198,7 +210,7 @@ body.logged-in
 		{
 			z-index: 1;
 			position: relative;
-			padding: rem-calc(24) 0;
+			padding: rem-calc(4) 0;
 		}
 	}
 
@@ -213,64 +225,153 @@ body.logged-in
 
 
 /** 
- * Adding styles for main navigation
- */
-.primary-menu
-{
-	margin-top: rem-calc(24);
-}
-
+* Adding styles for main navigation
+*/
 #main-nav
 {
+	display: flex;
+	justify-content: center;
+
 	li
 	{
-		display: inline-block;
 		position: relative;
+		display: inline-block;
 		vertical-align: middle;
 
 		a
 		{
-			font-family: "Montserrat", sans-serif;
-			font-size: rem-calc(18);
-			font-weight: 700;
-			line-height: rem-calc(21);
-			text-transform: uppercase;
 			padding: 0;
-			color: $brand-header-color;
-			transition: 0.3s all;
+			font-weight: 400;
+			font-size: rem-calc(16);
+			color: $brand-body-color;
+			line-height: rem-calc(18);
+			text-transform: uppercase;
+			font-family: 'kepler-std', serif;
+			transition: 0.3s color, 0.3s border-color;
+			border-bottom: rem-calc(1) solid transparent;
 			
 			&:hover
 			{
-				color: $brand-primary;
+				color: $brand-body-color;
+				border-bottom: rem-calc(1) solid $brand-body-color;
 			}
 		}
 
-		&.active
+		ul.submenu
+		{
+			text-align: left;
+			width: rem-calc(250);
+			background: $brand-white;
+			border: rem-calc(1) solid rgba($brand-body-color, 0.15);
+
+			li
+			{
+				display: block;
+				margin-right: 0;
+
+				a
+				{
+					display: block;
+					padding: rem-calc(8);
+					color: $brand-primary;
+					font-size: rem-calc(16);
+					line-height: rem-calc(18);
+					background-color: $brand-white;
+
+					&:hover
+					{
+						color: $brand-white;
+						background-color: $brand-primary;
+					}
+
+					&::after
+					{
+						display: none;
+					}
+				}
+
+				&::after
+				{
+					display: none;
+				}
+
+				&:not(:last-child)
+				{
+					a
+					{
+						border-bottom: rem-calc(1) solid rgba($brand-body-color, 0.15);
+					}
+				}
+
+				&.page_item.current-menu-item
+				{
+					a
+					{
+						color: $brand-white;
+						background-color: $brand-primary;
+					}
+
+					&::after
+					{
+						display: none;
+					}
+				}
+			}
+		}
+
+		&.is-dropdown-submenu-parent
+		{
+			>a
+			{
+				padding-right: rem-calc(18);
+
+				&::after
+				{
+					right: 0;
+					transition: 0.3s all;
+					margin-top: rem-calc(-3);
+					border-color: $brand-white transparent transparent;
+				}
+
+				&:hover
+				{
+					&::after
+					{
+						border-color: $brand-body-color transparent transparent;
+					}
+				}
+			}
+		}
+
+		&.page_item.active
 		{
 			a
 			{
 				color: $brand-primary;
+				border-bottom: rem-calc(1) solid $brand-primary;
+
+				&::after
+				{
+					border-color: $brand-primary transparent transparent;
+				}
 			}
 		}
 
 		&:not(:last-child)
 		{
-			margin-right: rem-calc(24);
+			margin-right: rem-calc(16);
 			
 			/**
-			 * Style for when viewport goes below {large} breakpoint
-			 */
-			@include breakpoint(large down)
+			* Style for when viewport goes above {large} breakpoint
+			*/
+			@include breakpoint(large)
 			{
-				margin-right: rem-calc(16);
+				margin-right: rem-calc(24);
 			}
 		}
 	}
 }
 
-/**
- * Off-Canvase Navigation
- */
 #offcanvas-nav
 {
 	margin-top: rem-calc(24);
@@ -280,26 +381,84 @@ body.logged-in
 	{
 		a
 		{
-			font-family: "Montserrat", sans-serif;
-			font-size: rem-calc(18);
-			font-weight: 700;
-			line-height: rem-calc(21);
-			text-transform: uppercase;
 			padding: 0;
-			color: $brand-header-color;
-			transition: 0.3s all;
+			font-weight: 400;
+			color: $brand-white;
+			display: inline-block;
+			font-size: rem-calc(16);
+			line-height: rem-calc(18);
+			text-transform: uppercase;
+			font-family: 'kepler-std', serif;
+			transition: 0.3s color, 0.3s border-color;
+			border-bottom: rem-calc(1) solid transparent;
 			
 			&:hover
 			{
-				color: $brand-primary;
+				color: $brand-body-color;
+				border-bottom: rem-calc(1) solid $brand-body-color;
 			}
 		}
 
-		&.active
+		ul.submenu
+		{
+			padding-top: rem-calc(4);
+			padding-bottom: rem-calc(4);
+			
+			li
+			{
+				a
+				{
+					font-size: rem-calc(16);
+					line-height: rem-calc(18);
+				}
+
+				&:not(:last-child)
+				{
+					margin-bottom: rem-calc(4);
+				}
+			}
+
+			@include breakpoint(small)
+			{
+				margin-left: rem-calc(18);
+			}
+		}
+
+		&.is-accordion-submenu-parent
+		{
+			>a
+			{
+				padding-right: rem-calc(18);
+
+				&::after
+				{
+					right: 0;
+					transition: 0.3s all;
+					margin-top: rem-calc(-3);
+					border-color: $brand-white transparent transparent;
+				}
+
+				&:hover
+				{
+					&::after
+					{
+						border-color: $brand-body-color transparent transparent;
+					}
+				}
+			}
+		}
+
+		&.page_item.active
 		{
 			a
 			{
-				color: $brand-primary;
+				color: $brand-white;
+				border-bottom: rem-calc(1) solid $brand-white;
+
+				&::after
+				{
+					border-color: $brand-white transparent transparent;
+				}
 			}
 		}
 
@@ -309,8 +468,8 @@ body.logged-in
 		}
 	}
 
-	@include breakpoint(small down)
-	{
-		text-align: center;
-	}
+	// @include breakpoint(small down)
+	// {
+	// 	text-align: center;
+	// }
 }

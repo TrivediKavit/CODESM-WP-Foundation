@@ -76,7 +76,7 @@ function custom_css_classes_for_vc_column( $class_string, $tag )
 	{
 		if(!preg_match('/columns/', $class_string))
 		{
-			$class_string = preg_replace( '/vc_col-sm-(\d{1,2})/', 'large-$1 columns', $class_string ); // This will replace "vc_col-sm-%" with "large-%"	
+			$class_string = preg_replace( '/vc_col-sm-(\d{1,2})/', 'columns small-12 large-$1', $class_string ); // This will replace "vc_col-sm-%" with "large-%"	
 		}
 	}
 	
@@ -131,7 +131,30 @@ function get_excerpt_by_id($post, $length = 35, $tags = '<a><em><strong>', $extr
 // {
 //     global $wp_scripts;
 //     if(is_admin()) return;
-//     $wp_scripts->registered['jquery-core']->src = 'https://code.jquery.com/jquery-3.6.0.min.js';
+//     $wp_scripts->registered['jquery-core']->src = 'https://code.jquery.com/jquery-3.6.1.min.js';
 //     $wp_scripts->registered['jquery']->deps = ['jquery-core'];
 // }
 // add_action('wp_enqueue_scripts', 'codesm_enqueue_modern_jquery');
+
+// GENERATE RANDOM COLOR
+function generate_random_color()
+{
+	return str_pad( dechex( mt_rand( 0, 127 ) ), 2, '0', STR_PAD_LEFT) . str_pad( dechex( mt_rand( 0, 255 ) ), 2, '0', STR_PAD_LEFT) . str_pad( dechex( mt_rand( 0, 255 ) ), 2, '0', STR_PAD_LEFT);
+}
+
+// DARKEN COLOR
+function darken_color($rgb, $darker=2)
+{
+    $hash = (strpos($rgb, '#') !== false) ? '#' : '';
+    $rgb = (strlen($rgb) == 7) ? str_replace('#', '', $rgb) : ((strlen($rgb) == 6) ? $rgb : false);
+    if(strlen($rgb) != 6) return $hash.'000000';
+    $darker = ($darker > 1) ? $darker : 1;
+
+    list($R16,$G16,$B16) = str_split($rgb,2);
+
+    $R = sprintf("%02X", floor(hexdec($R16)/$darker));
+    $G = sprintf("%02X", floor(hexdec($G16)/$darker));
+    $B = sprintf("%02X", floor(hexdec($B16)/$darker));
+
+    return $R.$G.$B;
+}

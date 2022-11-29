@@ -8,7 +8,7 @@
 
 <div class="top-bar" id="main-menu">
 	<div class="row">
-		<div class="columns large-12">
+		<div class="columns small-12">
 			<div class="top-bar-left">
 				<ul class="menu">
 					<li class="menu-text">

@@ -9,9 +9,12 @@ get_header(); ?>
 			
 	<div class="content">
 
+		<div class="show-for-large" style="height: 90px;"></div>
+		<div class="hide-for-large" style="height: 45px;"></div>
+
 		<div class="inner-content row">
 	
-			<main class="main columns large-12" role="main">
+			<main class="main columns small-12" role="main">
 
 				<article class="content-not-found">
 				
@@ -35,6 +38,9 @@ get_header(); ?>
 			</main> <!-- end #main -->
 
 		</div> <!-- end #inner-content -->
+
+		<div class="show-for-large" style="height: 90px;"></div>
+		<div class="hide-for-large" style="height: 45px;"></div>
 
 	</div> <!-- end #content -->
 

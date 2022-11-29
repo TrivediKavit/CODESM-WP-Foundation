@@ -11,7 +11,7 @@ get_header(); ?>
 	
 		<div class="inner-content row">
 		
-		    <main class="main columns large-12" role="main">
+		    <main class="main columns small-12" role="main">
 			    
 		    	<header>
 		    		<h1 class="page-title"><?php the_archive_title();?></h1>

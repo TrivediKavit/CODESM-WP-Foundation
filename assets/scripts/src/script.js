@@ -2,6 +2,7 @@
  *  ---------------------- IMPORT - START ----------------------- *
  *  ============================================================= */
 import 'what-input'
+import jQuery from 'jquery'
 import Foundation from 'foundation-sites'
 import intlTelInput from 'intl-tel-input'
 import Swiper, { Navigation, Pagination } from 'swiper'

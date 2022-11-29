@@ -13,7 +13,7 @@
 					<div id="inner-footer">
 
 						<div class="row">
-							<div class="columns large-12">
+							<div class="columns small-12">
 								<nav role="navigation">
 									<?php joints_footer_links(); ?>
 								</nav>
@@ -21,7 +21,7 @@
 	    				</div>
 
 	    				<div class="row">
-							<div class="columns large-12">
+							<div class="columns small-12">
 								<p class="source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>.</p>
 							</div>
 						</div>
