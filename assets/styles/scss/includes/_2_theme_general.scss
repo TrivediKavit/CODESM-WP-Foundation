@@ -90,53 +90,50 @@ body
 
 
 /** 
- * Add margin classes
+ * Add margin classes 
+ * (`bottom-buffer` is DEPRECATED. Use `margin-bottom` or `margin-top` instead.)
  */
-.no-margin-bottom
-{
-	margin-bottom: 0 !important;
+ $margin-sizes: (
+	"0point5rem": 8,
+	"1rem": 16,
+	"1point5rem": 24,
+	"2rem": 32,
+	"2point5rem": 40
+);
+$margin-positions: "margin-bottom", "margin-top";
+
+@each $margin-position in $margin-positions {
+	.no-#{$margin-position} {
+		#{$margin-position}: 0;
+	}
 }
 
-.bottom-buffer-0point5rem
-{
-	margin-bottom: rem-calc(8);
-}
-
-.bottom-buffer-1rem
-{
-	margin-bottom: rem-calc(16);
-}
-
-.bottom-buffer-1point5rem
-{
-	margin-bottom: rem-calc(24);
-}
-
-.bottom-buffer-2rem
-{
-	margin-bottom: rem-calc(32);
-}
-
-.bottom-buffer-2point5rem
-{
-	margin-bottom: rem-calc(40);
+@each $margin-position in $margin-positions {
+	@each $name, $px in $margin-sizes {
+		.#{$margin-position}-#{$name} {
+			#{$margin-position}: rem-calc($px);
+		}
+	}
 }
 
 
 /** 
  * Add font weight classes
  */
-.font-light
+.font-light, // @DEPRECATED
+.font-weight-light
 {
 	font-weight: 300;
 }
 
-.font-normal
+.font-normal, // @DEPRECATED
+.font-weight-normal
 {
 	font-weight: 400;
 }
 
-.font-bold
+.font-bold, // @DEPRECATED
+.font-weight-bold
 {
 	font-weight: 700;
 }
@@ -145,17 +142,20 @@ body
 /** 
  * Add background position and size classes
  */
-.bg-center
+.bg-center, // @DEPRECATED
+.bg-position-center
 {
 	background-position: center center!important;
 }
 
-.bg-center-top
+.bg-center-top, // @DEPRECATED
+.bg-position-center-top
 {
 	background-position: center top!important;
 }
 
-.bg-center-bottom
+.bg-center-bottom, // @DEPRECATED
+.bg-position-center-bottom
 {
 	background-position: center bottom!important;
 }
@@ -165,7 +165,8 @@ body
 	background-size: cover!important;
 }
 
-.bg-no-repeat
+.bg-no-repeat, // @DEPRECATED
+.bg-repeat-no-repeat
 {
 	background-repeat: no-repeat;
 }
@@ -190,47 +191,56 @@ body
 /** 
  * Add text and background color classes
  */
-.alt-primary
+.alt-primary, // @DEPRECATED
+.font-color-primary
 {
 	color: $brand-primary;
 }
 
-.alt-secondary
+.alt-secondary, // @DEPRECATED
+.font-color-secondary
 {
 	color: $brand-secondary;
 }
 
-.alt-white
+.alt-white, // @DEPRECATED
+.font-color-white
 {
 	color: $brand-white;
 }
 
-.alt-black
+.alt-black, // @DEPRECATED
+.font-color-black
 {
 	color: $black;
 }
 
-.alt-header-color
+.alt-header-color, // @DEPRECATED
+.font-color-header-color
 {
 	color: $brand-header-color;
 }
 
-.bg-primary
+.bg-primary, // @DEPRECATED
+.bg-color-primary
 {
 	background-color: $brand-primary;
 }
 
-.bg-secondary
+.bg-secondary, // @DEPRECATED
+.bg-color-secondary
 {
 	background-color: $brand-secondary;
 }
 
-.bg-white
+.bg-white, // @DEPRECATED
+.bg-color-white
 {
 	background-color: $brand-white;
 }
 
-.bg-primary-for-mobile
+.bg-primary-for-mobile, // @DEPRECATED
+.bg-color-primary-for-mobile
 {
 	/**
 	* Style for when viewport goes below {large} breakpoint
@@ -241,7 +251,8 @@ body
 	}
 }
 
-.bg-secondary-for-mobile
+.bg-secondary-for-mobile, // @DEPRECATED
+.bg-color-secondary-for-mobile
 {
 	/**
 	* Style for when viewport goes below {large} breakpoint
@@ -256,12 +267,14 @@ body
 /** 
  * Add text-transform and text-decoration classes
  */
-.uc
+.uc, // @DEPRECATED
+.text-transform-uppercase
 {
 	text-transform: uppercase;
 }
 
-.underlined
+.underlined, // @DEPRECATED
+.text-decoration-underlined
 {
 	text-decoration: underline;
 }
